@@ -48,12 +48,11 @@ pwd
 mv rawdata data/raw
 
 # 3. List the contents of the ./data/raw directory
-cd data/raw/
-ls
+ls data/raw/
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 pwd
-cd ..
+cd data
 pwd
 mkdir processed
 cd processed
@@ -78,15 +77,10 @@ cp raw/*event*.log processed/event_logs/
 
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
-pwd
-cd ~/week1/shell/02_activities/assignments/newproject/data/raw/
-rm ./*ipaddr*
-cd ~/week1/shell/02_activities/assignments/newproject/data/processed/user_logs
-pwd
-rm ./*ipaddr*
+rm ./raw/*ipaddr*
+rm ./processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-cd ~/week1/shell/02_activities/assignments/newproject/data/
 ls processed/* > inventory.txt
 
 
