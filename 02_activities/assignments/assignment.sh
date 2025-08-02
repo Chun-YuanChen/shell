@@ -43,13 +43,11 @@ unzip -q rawdata.zip
 # 1. Create a directory named data
 mkdir data
 pwd
-ls
 
 # 2. Move the ./rawdata directory to ./data/raw
 mv rawdata data/raw
 ls
 cd data
-ls
 
 # 3. List the contents of the ./data/raw directory
 pwd
@@ -90,22 +88,18 @@ ls
 cd ..
 cd ..
 cd processed/event_logs/
-ls
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 pwd
 cd ~/week1/shell/02_activities/assignments/newproject/data/raw/
 rm ./*ipaddr*
-ls
 cd ~/week1/shell/02_activities/assignments/newproject/data/processed/user_logs
 pwd
 rm ./*ipaddr*
-ls
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 cd ~/week1/shell/02_activities/assignments/newproject/data/
 ls processed/* > inventory.txt
-code inventory.txt
 
 
 ###########################################
